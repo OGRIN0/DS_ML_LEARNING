@@ -2,7 +2,7 @@ import matplotlib.pyplot as mtp
 import pandas as pd
 from sklearn.cluster import KMeans
 
-ds = pd.read_csv('Mall_Customers.csv')
+ds = pd.read_csv('src/Mall_Customers.csv')
 
 print(ds)
 
