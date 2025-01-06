@@ -15,7 +15,7 @@ bucket = sagemaker_session.default_bucket()
 
 s3 = boto3.client("s3")
 
-filename = "wdc.s3"
+filename = "src/wdc.s3"
 s3.download_file("sagemaker-us-east-1-340752796889", "breast_cancer.csv", filename)
 
 data = pd.read_csv(filename, header=None)
@@ -58,7 +58,7 @@ test_x = data_test.iloc[:, 2:].to_numpy()
 
 train_data_path = f"s3://{bucket}/data/train"
 validation_data_path = f"s3://{bucket}/data/validation"
-sagemaker_session.upload_data(path="data.csv", bucket=bucket, key_prefix="data/train")
+sagemaker_session.upload_data(path="src/data.csv", bucket=bucket, key_prefix="data/train")
 
 container = image_uris.retrieve(region=region, framework="linear-learner")
 

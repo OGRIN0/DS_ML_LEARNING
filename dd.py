@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 directory = "/Users/amarnath/DS_ML_learning"
-filename = "breast_cancer.csv"
+filename = "src/breast_cancer.csv"
 file_path = os.path.join(directory, filename)
 
 num_records = 100
